@@ -1,0 +1,8 @@
+prefix=/home/alex/workspace/devel
+
+Name: navigator
+Description: Description of navigator
+Version: 0.0.0
+Cflags: -I/home/alex/workspace/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime roscpp std_msgs geometry_msgs nav_msgs traj_builder actionlib xform_utils

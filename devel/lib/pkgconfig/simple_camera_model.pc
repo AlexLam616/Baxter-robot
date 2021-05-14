@@ -1,0 +1,8 @@
+prefix=/home/alex/workspace/devel
+
+Name: simple_camera_model
+Description: Description of simple_camera_model
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
