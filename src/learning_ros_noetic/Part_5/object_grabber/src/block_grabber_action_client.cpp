@@ -71,7 +71,7 @@ int main(int argc, char** argv) {
     const double MAX_WAIT_TIME = 30.0; // 30-second watchdog
     ros::Duration sleeper(dt_wait);
 
-    int object_id = ObjectIdCodes::TOY_BLOCK_ID; //choose object of interest
+    int object_id = ObjectIdCodes::COKE_CAN_UPRIGHT; //choose object of interest
 
 
     object_grabber::object_grabberGoal object_grabber_goal;
@@ -118,7 +118,7 @@ int main(int argc, char** argv) {
 
     ROS_INFO("sending a grab-object command");
     object_grabber_goal.action_code = object_grabber::object_grabberGoal::GRAB_OBJECT; //specify the action to be performed 
-    object_grabber_goal.object_id = ObjectIdCodes::TOY_BLOCK_ID; // specify the object to manipulate                
+    object_grabber_goal.object_id = ObjectIdCodes::COKE_CAN_UPRIGHT; // specify the object to manipulate                
     object_grabber_goal.object_frame = object_pickup_poseStamped; //and the object's current pose
     object_grabber_goal.grasp_option = object_grabber::object_grabberGoal::DEFAULT_GRASP_STRATEGY; //from above
     object_grabber_goal.speed_factor = 1.0;
@@ -150,7 +150,7 @@ int main(int argc, char** argv) {
    
     ROS_INFO("sending a dropoff-object command");
     object_grabber_goal.action_code = object_grabber::object_grabberGoal::DROPOFF_OBJECT; //specify the action to be performed 
-    object_grabber_goal.object_id = ObjectIdCodes::TOY_BLOCK_ID; // specify the object to manipulate                
+    object_grabber_goal.object_id = ObjectIdCodes::COKE_CAN_UPRIGHT; // specify the object to manipulate                
     object_grabber_goal.object_frame = object_dropoff_poseStamped; //and the object's current pose
     object_grabber_goal.grasp_option = object_grabber::object_grabberGoal::DEFAULT_GRASP_STRATEGY; //from above
     object_grabber_goal.speed_factor = 1.0;

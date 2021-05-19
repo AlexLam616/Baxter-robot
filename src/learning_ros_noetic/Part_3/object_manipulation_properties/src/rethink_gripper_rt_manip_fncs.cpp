@@ -22,10 +22,10 @@ void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
     object_pose_wrt_gripper.position.x = 0.0; //easy--align gripper origin w/ object origin
     object_pose_wrt_gripper.position.y = 0.0;
     object_pose_wrt_gripper.position.z = 0.0;
-    object_pose_wrt_gripper.orientation.x = 1.0; //x-axis parallel, z-axis anti-parallel:
+    object_pose_wrt_gripper.orientation.x = 0.0; //x-axis parallel, z-axis anti-parallel:
     object_pose_wrt_gripper.orientation.y = 0.0; //grasp from above
-    object_pose_wrt_gripper.orientation.z = 0.0;
-    object_pose_wrt_gripper.orientation.w = 0.0;
+    object_pose_wrt_gripper.orientation.z = 1.0;
+    object_pose_wrt_gripper.orientation.w = 1.0;
     object_grasp_poses_wrt_gripper.clear();
     object_grasp_poses_wrt_gripper.push_back(object_pose_wrt_gripper);
     object_pose_wrt_gripper.orientation.x = 0.0; //x-axis anti-parallel, z-axis anti-parallel:
@@ -48,13 +48,13 @@ void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
         case object_manipulation_properties::objectManipulationQueryRequest::APPROACH_STRATEGY_OPTIONS_QUERY:
             response.grasp_strategy_options.clear();
             //only options, at present, are APPROACH_Z_TOOL and APPROACH_LATERAL_SLIDE
-            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::APPROACH_Z_TOOL);
+            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::APPROACH_LATERAL_SLIDE);
             response.valid_reply = true;
             break;
         case object_manipulation_properties::objectManipulationQueryRequest::DEPART_STRATEGY_OPTIONS_QUERY:
             response.grasp_strategy_options.clear();
             //only options, at present, are DEPART_Z_TOOL and DEPART_LATERAL_SLIDE
-            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::DEPART_Z_TOOL);
+            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::DEPART_LATERAL_SLIDE);
             response.valid_reply = true;
             break;
             //inquiry for grasp transform w/ specified grasp option:
@@ -77,7 +77,7 @@ void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
 
         case object_manipulation_properties::objectManipulationQueryRequest::GET_APPROACH_POSE_TRANSFORMS:
             ROS_INFO("get approach pose transforms...");
-            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::APPROACH_Z_TOOL) {
+            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::APPROACH_LATERAL_SLIDE) {
                 //compute the approach transform, i.e. pose of object w/rt gripper in approach pose from above
                 ROS_INFO("approach grasp along tool-z direction: ");
                 object_approach_poses_wrt_gripper.clear();
@@ -99,7 +99,7 @@ void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
                 break;
             }
         case object_manipulation_properties::objectManipulationQueryRequest::GET_DEPART_POSE_TRANSFORMS:
-            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::DEPART_Z_TOOL) {
+            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::DEPART_LATERAL_SLIDE) {
                 //compute the depart transform, i.e. pose of object w/rt gripper to depart above
                 //in this case, identical to approach poses
                 ROS_INFO("depart strategy along -tool-z direction");

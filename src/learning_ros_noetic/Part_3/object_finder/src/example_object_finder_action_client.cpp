@@ -1,11 +1,12 @@
 // example_object_finder_action_client: 
-// wsn, Oct 2018
-// illustrates use of magic_object_finder action server called "object_finder_action_service"
+// wsn, April, 2016
+// illustrates use of object_finder action server called "objectFinderActionServer"
 
 #include<ros/ros.h>
 #include <actionlib/client/simple_action_client.h>
 #include <actionlib/client/terminal_state.h>
-#include <magic_object_finder/magicObjectFinderAction.h>
+#include <object_finder/objectFinderAction.h>
+#include <object_manipulation_properties/object_ID_codes.h>
 
 #include <Eigen/Eigen>
 #include <Eigen/Dense>
@@ -16,16 +17,15 @@ geometry_msgs::PoseStamped g_perceived_object_pose;
 ros::Publisher *g_pose_publisher;
 
 int g_found_object_code;
-
 void objectFinderDoneCb(const actionlib::SimpleClientGoalState& state,
-        const magic_object_finder::magicObjectFinderResultConstPtr& result) {
+        const object_finder::objectFinderResultConstPtr& result) {
     ROS_INFO(" objectFinderDoneCb: server responded with state [%s]", state.toString().c_str());
     g_found_object_code=result->found_object_code;
     ROS_INFO("got object code response = %d; ",g_found_object_code);
-    if (g_found_object_code==magic_object_finder::magicObjectFinderResult::OBJECT_CODE_NOT_RECOGNIZED) {
+    if (g_found_object_code==object_finder::objectFinderResult::OBJECT_CODE_NOT_RECOGNIZED) {
         ROS_WARN("object code not recognized");
     }
-    else if (g_found_object_code==magic_object_finder::magicObjectFinderResult::OBJECT_FOUND) {
+    else if (g_found_object_code==object_finder::objectFinderResult::OBJECT_FOUND) {
         ROS_INFO("found object!");
          g_perceived_object_pose= result->object_pose;
          ROS_INFO("got pose x,y,z = %f, %f, %f",g_perceived_object_pose.pose.position.x,
@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
     ros::NodeHandle nh; //standard ros node handle    
     
     
-    actionlib::SimpleActionClient<magic_object_finder::magicObjectFinderAction> object_finder_ac("object_finder_action_service", true);
+    actionlib::SimpleActionClient<object_finder::objectFinderAction> object_finder_ac("object_finder_action_service", true);
     
     // attempt to connect to the server:
     ROS_INFO("waiting for server: ");
@@ -62,10 +62,19 @@ int main(int argc, char** argv) {
     ROS_INFO("connected to object_finder action server"); // if here, then we connected to the server; 
     ros::Publisher pose_publisher = nh.advertise<geometry_msgs::PoseStamped>("triad_display_pose", 1, true); 
     g_pose_publisher = &pose_publisher;
-    magic_object_finder::magicObjectFinderGoal object_finder_goal;
-    object_finder_goal.object_name = "gear_part";
+    object_finder::objectFinderGoal object_finder_goal;
+    //object_finder::objectFinderResult object_finder_result;
 
-    object_finder_ac.sendGoal(object_finder_goal,&objectFinderDoneCb); 
+    object_finder_goal.object_id = ObjectIdCodes::TABLE_SURFACE;
+    object_finder_goal.known_surface_ht = false; //require find table height
+    //object_finder_goal.object_id=object_finder::objectFinderGoal::COKE_CAN_UPRIGHT;
+    //object_finder_goal.object_id=object_finder::objectFinderGoal::TOY_BLOCK;
+    //object_finder_goal.known_surface_ht=true;
+    //object_finder_goal.known_surface_ht=false; //require find table height
+    //object_finder_goal.surface_ht = 0.05;
+    double surface_height;
+    ROS_INFO("sending goal: ");
+        object_finder_ac.sendGoal(object_finder_goal,&objectFinderDoneCb); 
         
         bool finished_before_timeout = object_finder_ac.waitForResult(ros::Duration(10.0));
         //bool finished_before_timeout = action_client.waitForResult(); // wait forever...
@@ -73,9 +82,31 @@ int main(int argc, char** argv) {
             ROS_WARN("giving up waiting on result ");
             return 1;
         }
-
-
-    if (g_found_object_code == magic_object_finder::magicObjectFinderResult::OBJECT_FOUND)   {
+        
+    if (g_found_object_code == object_finder::objectFinderResult::OBJECT_FOUND) {
+                        ROS_INFO("surface-finder success");
+                        surface_height = g_perceived_object_pose.pose.position.z; // table-top height, as found by object_finder 
+                        ROS_INFO("found table ht = %f",surface_height);   }
+    else {
+        ROS_WARN("did not find table height; quitting:");
+        return 1;
+    }
+    //if here, then find block using known table height:
+    object_finder_goal.known_surface_ht = true;
+    object_finder_goal.surface_ht = surface_height;
+    ROS_INFO("using surface ht = %f",surface_height);        
+    object_finder_goal.object_id=ObjectIdCodes::COKE_CAN_UPRIGHT;
+     ROS_INFO("sending goal to find COKE_CAN_UPRIGHT: ");
+        object_finder_ac.sendGoal(object_finder_goal,&objectFinderDoneCb); 
+        
+        finished_before_timeout = object_finder_ac.waitForResult(ros::Duration(10.0));
+        //bool finished_before_timeout = action_client.waitForResult(); // wait forever...
+        if (!finished_before_timeout) {
+            ROS_WARN("giving up waiting on result ");
+            return 1;
+        }       
+        
+    if (g_found_object_code == object_finder::objectFinderResult::OBJECT_FOUND)   {
         ROS_INFO("found object!");
         return 0;
     }    

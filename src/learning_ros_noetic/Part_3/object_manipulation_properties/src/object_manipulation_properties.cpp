@@ -16,7 +16,7 @@ bool ObjectManipulationProperties::get_object_info(int object_id, Eigen::Affine3
    Eigen::Vector3d origin_object_wrt_gripper;    
    geometry_msgs::Pose object_pose_wrt_gripper;
     switch (object_id) {
-        case TOY_BLOCK_ID:
+        case COKE_CAN_UPRIGHT:
             //set approach distance and gripper-closure test val: MAGIC NUMBERS
             // appropriate ONLY for this object with Baxter right-hand gripper in simu
             approach_dist = 0.05; //old float64 TOY_BLOCK_APPROACH_DIST = 0.05
