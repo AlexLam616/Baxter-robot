@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/alex/workspace/build
 include learning_ros_noetic/Part_3/magic_object_finder/CMakeFiles/_magic_object_finder_generate_messages_check_deps_magicObjectFinderActionFeedback.dir/progress.make
 
 learning_ros_noetic/Part_3/magic_object_finder/CMakeFiles/_magic_object_finder_generate_messages_check_deps_magicObjectFinderActionFeedback:
-	cd /home/alex/workspace/build/learning_ros_noetic/Part_3/magic_object_finder && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py magic_object_finder /home/alex/workspace/devel/share/magic_object_finder/msg/magicObjectFinderActionFeedback.msg actionlib_msgs/GoalStatus:std_msgs/Header:magic_object_finder/magicObjectFinderFeedback:actionlib_msgs/GoalID
+	cd /home/alex/workspace/build/learning_ros_noetic/Part_3/magic_object_finder && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py magic_object_finder /home/alex/workspace/devel/share/magic_object_finder/msg/magicObjectFinderActionFeedback.msg std_msgs/Header:magic_object_finder/magicObjectFinderFeedback:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus
 
 _magic_object_finder_generate_messages_check_deps_magicObjectFinderActionFeedback: learning_ros_noetic/Part_3/magic_object_finder/CMakeFiles/_magic_object_finder_generate_messages_check_deps_magicObjectFinderActionFeedback
 _magic_object_finder_generate_messages_check_deps_magicObjectFinderActionFeedback: learning_ros_noetic/Part_3/magic_object_finder/CMakeFiles/_magic_object_finder_generate_messages_check_deps_magicObjectFinderActionFeedback.dir/build.make

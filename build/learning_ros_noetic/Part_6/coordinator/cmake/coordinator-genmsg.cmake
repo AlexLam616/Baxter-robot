@@ -19,32 +19,32 @@ add_custom_target(coordinator_generate_messages ALL)
 
 get_filename_component(_filename "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskAction.msg" NAME_WE)
 add_custom_target(_coordinator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskAction.msg" "geometry_msgs/PoseStamped:geometry_msgs/Point:actionlib_msgs/GoalStatus:coordinator/ManipTaskGoal:actionlib_msgs/GoalID:geometry_msgs/Quaternion:coordinator/ManipTaskActionFeedback:coordinator/ManipTaskActionResult:coordinator/ManipTaskFeedback:coordinator/ManipTaskActionGoal:std_msgs/Header:geometry_msgs/Pose:coordinator/ManipTaskResult"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskAction.msg" "coordinator/ManipTaskActionFeedback:coordinator/ManipTaskActionGoal:geometry_msgs/PoseStamped:actionlib_msgs/GoalID:coordinator/ManipTaskResult:std_msgs/Header:geometry_msgs/Point:coordinator/ManipTaskFeedback:geometry_msgs/Pose:coordinator/ManipTaskActionResult:geometry_msgs/Quaternion:actionlib_msgs/GoalStatus:coordinator/ManipTaskGoal"
 )
 
 get_filename_component(_filename "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg" NAME_WE)
 add_custom_target(_coordinator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg" "geometry_msgs/PoseStamped:geometry_msgs/Point:coordinator/ManipTaskGoal:actionlib_msgs/GoalID:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg" "geometry_msgs/PoseStamped:actionlib_msgs/GoalID:std_msgs/Header:geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion:coordinator/ManipTaskGoal"
 )
 
 get_filename_component(_filename "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg" NAME_WE)
 add_custom_target(_coordinator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg" "geometry_msgs/PoseStamped:actionlib_msgs/GoalStatus:geometry_msgs/Point:actionlib_msgs/GoalID:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Pose:coordinator/ManipTaskResult"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg" "geometry_msgs/PoseStamped:actionlib_msgs/GoalID:std_msgs/Header:geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion:coordinator/ManipTaskResult:actionlib_msgs/GoalStatus"
 )
 
 get_filename_component(_filename "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg" NAME_WE)
 add_custom_target(_coordinator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg" "actionlib_msgs/GoalStatus:actionlib_msgs/GoalID:std_msgs/Header:coordinator/ManipTaskFeedback"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg" "std_msgs/Header:actionlib_msgs/GoalStatus:coordinator/ManipTaskFeedback:actionlib_msgs/GoalID"
 )
 
 get_filename_component(_filename "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg" NAME_WE)
 add_custom_target(_coordinator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg" "geometry_msgs/PoseStamped:geometry_msgs/Point:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg" "geometry_msgs/PoseStamped:std_msgs/Header:geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg" NAME_WE)
 add_custom_target(_coordinator_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg" "geometry_msgs/PoseStamped:geometry_msgs/Point:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "coordinator" "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg" "geometry_msgs/PoseStamped:std_msgs/Header:geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg" NAME_WE)
@@ -71,37 +71,37 @@ add_custom_target(_coordinator_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/coordinator
 )
 _generate_msg_cpp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/coordinator
 )
 _generate_msg_cpp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/coordinator
 )
 _generate_msg_cpp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/coordinator
 )
 _generate_msg_cpp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/coordinator
 )
 _generate_msg_cpp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/coordinator
 )
 _generate_msg_cpp(coordinator
@@ -168,37 +168,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS coordinator_generate_messages_cpp)
 _generate_msg_eus(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/coordinator
 )
 _generate_msg_eus(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/coordinator
 )
 _generate_msg_eus(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/coordinator
 )
 _generate_msg_eus(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/coordinator
 )
 _generate_msg_eus(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/coordinator
 )
 _generate_msg_eus(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/coordinator
 )
 _generate_msg_eus(coordinator
@@ -265,37 +265,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS coordinator_generate_messages_eus)
 _generate_msg_lisp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/coordinator
 )
 _generate_msg_lisp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/coordinator
 )
 _generate_msg_lisp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/coordinator
 )
 _generate_msg_lisp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/coordinator
 )
 _generate_msg_lisp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/coordinator
 )
 _generate_msg_lisp(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/coordinator
 )
 _generate_msg_lisp(coordinator
@@ -362,37 +362,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS coordinator_generate_messages_lisp)
 _generate_msg_nodejs(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/coordinator
 )
 _generate_msg_nodejs(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/coordinator
 )
 _generate_msg_nodejs(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/coordinator
 )
 _generate_msg_nodejs(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/coordinator
 )
 _generate_msg_nodejs(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/coordinator
 )
 _generate_msg_nodejs(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/coordinator
 )
 _generate_msg_nodejs(coordinator
@@ -459,37 +459,37 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS coordinator_generate_messages_nodej
 _generate_msg_py(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskAction.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/coordinator
 )
 _generate_msg_py(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/coordinator
 )
 _generate_msg_py(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/coordinator
 )
 _generate_msg_py(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/alex/workspace/devel/share/coordinator/msg/ManipTaskFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/coordinator
 )
 _generate_msg_py(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/coordinator
 )
 _generate_msg_py(coordinator
   "/home/alex/workspace/devel/share/coordinator/msg/ManipTaskResult.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/PoseStamped.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/coordinator
 )
 _generate_msg_py(coordinator

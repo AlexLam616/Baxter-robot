@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/alex/workspace/build
 include learning_ros_noetic/Part_6/coordinator/CMakeFiles/_coordinator_generate_messages_check_deps_ManipTaskActionGoal.dir/progress.make
 
 learning_ros_noetic/Part_6/coordinator/CMakeFiles/_coordinator_generate_messages_check_deps_ManipTaskActionGoal:
-	cd /home/alex/workspace/build/learning_ros_noetic/Part_6/coordinator && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py coordinator /home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg geometry_msgs/PoseStamped:geometry_msgs/Point:coordinator/ManipTaskGoal:actionlib_msgs/GoalID:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Pose
+	cd /home/alex/workspace/build/learning_ros_noetic/Part_6/coordinator && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py coordinator /home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionGoal.msg geometry_msgs/PoseStamped:actionlib_msgs/GoalID:std_msgs/Header:geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion:coordinator/ManipTaskGoal
 
 _coordinator_generate_messages_check_deps_ManipTaskActionGoal: learning_ros_noetic/Part_6/coordinator/CMakeFiles/_coordinator_generate_messages_check_deps_ManipTaskActionGoal
 _coordinator_generate_messages_check_deps_ManipTaskActionGoal: learning_ros_noetic/Part_6/coordinator/CMakeFiles/_coordinator_generate_messages_check_deps_ManipTaskActionGoal.dir/build.make

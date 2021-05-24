@@ -552,7 +552,7 @@ bool CartTrajPlanner::jspace_path_planner_to_affine_goal(Vectorq7x1 q_start, Eig
     // and motion THRU zero is appropriate (not shortest periodic distance)
     
     //note: prepose hard-code defined in baxter_cart_move_as;
-    //q_pre_pose_ << -0.907528, -0.111813, 2.06622, 1.8737, -1.295, 2.00164, 1.57;
+    //q_pre_pose_ << -0.907528, -0.111813, 2.06622, 1.8737, -1.295, 2.00164, 0;
     // should move this to a header;  want shoulder elevation near zero to elevate elbow
 
     Eigen::VectorXd dq_move(7), q_modified_start(7);
@@ -567,7 +567,7 @@ bool CartTrajPlanner::jspace_path_planner_to_affine_goal(Vectorq7x1 q_start, Eig
     //const double q3dotmax = 0.5;
     //const double q4dotmax = 1;
     //const double q5dotmax = 1;
-    const double q6dotmax = 1.57;
+    //const double q6dotmax = 1;
     // should make these speed limits more accessible
     //jspace_planner_weights_ are defined here, above
     double penalty_best = 1000000;

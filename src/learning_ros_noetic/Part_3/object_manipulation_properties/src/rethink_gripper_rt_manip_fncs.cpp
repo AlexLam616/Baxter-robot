@@ -3,7 +3,7 @@
 
 
 
-//provide details for grasping object COKE_CAN using RETHINK gripper
+//provide details for grasping object TOY_BLOCK using RETHINK gripper
 // need one of these specialized functions for every case of object_ID for RETHINK gripper
 
 void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
@@ -17,19 +17,19 @@ void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
     Eigen::Vector3d object_origin_wrt_gripper_frame;
     Eigen::Vector3d x_axis, y_axis, z_axis;
     XformUtils xformUtils;
-    ROS_INFO("query, baxter gripper, COKE_CAN; query code %d, grasp option %d", query_code, grasp_option);
-    //here are two grasp poses using baxter gripper to grasp COKE_CAN:
+    ROS_INFO("query, baxter gripper, toy_block; query code %d, grasp option %d", query_code, grasp_option);
+    //here are two grasp poses using baxter gripper to grasp toy_block:
     object_pose_wrt_gripper.position.x = 0.0; //easy--align gripper origin w/ object origin
     object_pose_wrt_gripper.position.y = 0.0;
     object_pose_wrt_gripper.position.z = 0.0;
-    object_pose_wrt_gripper.orientation.x = 0.0; //x-axis parallel, z-axis anti-parallel:
-    object_pose_wrt_gripper.orientation.y = 0.0; //grasp from above
-    object_pose_wrt_gripper.orientation.z = 1.0;
-    object_pose_wrt_gripper.orientation.w = 1.0;
+    object_pose_wrt_gripper.orientation.x = 1.0; //x-axis parallel, z-axis anti-parallel:
+    object_pose_wrt_gripper.orientation.y = 1.0; //grasp from above
+    object_pose_wrt_gripper.orientation.z = -1.0;
+    object_pose_wrt_gripper.orientation.w = 0.0;
     object_grasp_poses_wrt_gripper.clear();
     object_grasp_poses_wrt_gripper.push_back(object_pose_wrt_gripper);
-    object_pose_wrt_gripper.orientation.x = 0.0; //x-axis anti-parallel, z-axis anti-parallel:
-    object_pose_wrt_gripper.orientation.y = 1.0; //grasp from above     
+    object_pose_wrt_gripper.orientation.x = 1.0; //x-axis anti-parallel, z-axis anti-parallel:
+    object_pose_wrt_gripper.orientation.y = 0.0; //grasp from above     
     object_grasp_poses_wrt_gripper.push_back(object_pose_wrt_gripper);
     Eigen::Affine3d affine_object_wrt_gripper, affine_object_wrt_gripper_approach, affine_object_wrt_gripper_depart;
     //affine_object_wrt_gripper = xformUtils.transformPoseToEigenAffine3d(geometry_msgs::Pose pose);   
@@ -41,25 +41,25 @@ void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
             //in this case, the only option specified is grasp-from-above--which really means
             // from object z-direction...still works if object pose is tilted
             // only alternative, at present, is GRASP_FROM_SIDE
-            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::GRASP_FROM_SIDE);
+            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::GRASP_FROM_ABOVE);
             //this version does not populate tolerances of grasp;
             response.valid_reply = true;
             break;
         case object_manipulation_properties::objectManipulationQueryRequest::APPROACH_STRATEGY_OPTIONS_QUERY:
             response.grasp_strategy_options.clear();
             //only options, at present, are APPROACH_Z_TOOL and APPROACH_LATERAL_SLIDE
-            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::APPROACH_LATERAL_SLIDE);
+            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::APPROACH_Z_TOOL);
             response.valid_reply = true;
             break;
         case object_manipulation_properties::objectManipulationQueryRequest::DEPART_STRATEGY_OPTIONS_QUERY:
             response.grasp_strategy_options.clear();
             //only options, at present, are DEPART_Z_TOOL and DEPART_LATERAL_SLIDE
-            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::DEPART_LATERAL_SLIDE);
+            response.grasp_strategy_options.push_back(object_manipulation_properties::objectManipulationQueryResponse::DEPART_Z_TOOL);
             response.valid_reply = true;
             break;
             //inquiry for grasp transform w/ specified grasp option:
         case object_manipulation_properties::objectManipulationQueryRequest::GET_GRASP_POSE_TRANSFORMS:
-            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::GRASP_FROM_SIDE) {
+            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::GRASP_FROM_ABOVE) {
                 //fill in grasp pose: pose of object frame w/rt gripper frame
                 //geometry_msgs/Pose[] gripper_pose_options
                 response.gripper_pose_options.clear();
@@ -70,14 +70,14 @@ void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
                 response.valid_reply = true;
                 break;
             } else { //this is where to consider alternative grasp strategies for TOY_BLOCK using RETHINK gripper
-                ROS_WARN("this grasp option not specified for RETHINK gripper and object COKE_CAN_UPRIGHT");
+                ROS_WARN("this grasp option not specified for RETHINK gripper and object TOY_BLOCK_ID");
                 response.valid_reply = false;
                 break;
             }
 
         case object_manipulation_properties::objectManipulationQueryRequest::GET_APPROACH_POSE_TRANSFORMS:
             ROS_INFO("get approach pose transforms...");
-            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::APPROACH_LATERAL_SLIDE) {
+            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::APPROACH_Z_TOOL) {
                 //compute the approach transform, i.e. pose of object w/rt gripper in approach pose from above
                 ROS_INFO("approach grasp along tool-z direction: ");
                 object_approach_poses_wrt_gripper.clear();
@@ -93,13 +93,13 @@ void rethink_grasp_COKE_CAN_UPRIGHT(int query_code, int grasp_option,
                 }
                 response.valid_reply = true;
                 break;
-            } else { //this is where to consider alternative grasp strategies for COKE_CAN using RETHINK gripper
-                ROS_WARN("this grasp option not specified for RETHINK gripper and object COKE_CAN_UPRIGHT");
+            } else { //this is where to consider alternative grasp strategies for TOY_BLOCK using RETHINK gripper
+                ROS_WARN("this grasp option not specified for RETHINK gripper and object TOY_BLOCK_ID");
                 response.valid_reply = false;
                 break;
             }
         case object_manipulation_properties::objectManipulationQueryRequest::GET_DEPART_POSE_TRANSFORMS:
-            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::DEPART_LATERAL_SLIDE) {
+            if (grasp_option == object_manipulation_properties::objectManipulationQueryRequest::DEPART_Z_TOOL) {
                 //compute the depart transform, i.e. pose of object w/rt gripper to depart above
                 //in this case, identical to approach poses
                 ROS_INFO("depart strategy along -tool-z direction");

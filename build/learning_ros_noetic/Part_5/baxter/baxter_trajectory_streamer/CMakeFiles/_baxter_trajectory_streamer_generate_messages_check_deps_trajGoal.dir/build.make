@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/alex/workspace/build
 include learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer/CMakeFiles/_baxter_trajectory_streamer_generate_messages_check_deps_trajGoal.dir/progress.make
 
 learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer/CMakeFiles/_baxter_trajectory_streamer_generate_messages_check_deps_trajGoal:
-	cd /home/alex/workspace/build/learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer && ../../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py baxter_trajectory_streamer /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajGoal.msg std_msgs/Header:trajectory_msgs/JointTrajectoryPoint:trajectory_msgs/JointTrajectory
+	cd /home/alex/workspace/build/learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer && ../../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py baxter_trajectory_streamer /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajGoal.msg trajectory_msgs/JointTrajectoryPoint:std_msgs/Header:trajectory_msgs/JointTrajectory
 
 _baxter_trajectory_streamer_generate_messages_check_deps_trajGoal: learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer/CMakeFiles/_baxter_trajectory_streamer_generate_messages_check_deps_trajGoal
 _baxter_trajectory_streamer_generate_messages_check_deps_trajGoal: learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer/CMakeFiles/_baxter_trajectory_streamer_generate_messages_check_deps_trajGoal.dir/build.make

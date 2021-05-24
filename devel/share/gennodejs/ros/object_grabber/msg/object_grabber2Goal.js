@@ -82,7 +82,7 @@ class object_grabber2Goal {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '0ec453df5b9dae92255e6473b05fa39a';
+    return '1a138183271b2d4bedc55643f3d08868';
   }
 
   static messageDefinition() {
@@ -96,11 +96,11 @@ class object_grabber2Goal {
     
     int32 UPRIGHT_CYLINDER = 1
     int32 GRAB_UPRIGHT_CYLINDER = 1 #synonym
-    int32 TOY_BLOCK = 2
-    int32 GRAB_TOY_BLOCK = 2 #synonym
+    int32 COKE_CAN = 2
+    int32 GRAB_COKE_CAN = 2 #synonym
     int32 GRAB_W_TOOL_Z_APPROACH = 2 #another synonym
     int32 PLACE_UPRIGHT_CYLINDER = 3 #new drop-off command
-    int32 PLACE_TOY_BLOCK = 4 #drop-off toy block
+    int32 PLACE_COKE_CAN = 4 #drop-off coke can
     int32 DROPOFF_ALONG_TOOL_Z = 4 #synonym
     
     int32 MOVE_FLANGE_TO = 5 #specify flange pose to reach
@@ -112,9 +112,9 @@ class object_grabber2Goal {
     int32 OPEN_GRIPPER = 101
     
     #moved these properties to object_manipulation_properties package/library
-    #float64 TOY_BLOCK_APPROACH_DIST = 0.05
-    #expect w/ gripper closed on toy block, finger separation should be more than this value:
-    #float64 TOY_BLOCK_GRIPPER_CLOSE_TEST_VAL = 80.0
+    #float64 COKE_CAN_APPROACH_DIST = 0.05
+    #expect w/ gripper closed on coke can, finger separation should be more than this value:
+    #float64 COKE_CAN_GRIPPER_CLOSE_TEST_VAL = 80.0
     
     
     #add more objects here...
@@ -210,11 +210,11 @@ class object_grabber2Goal {
 object_grabber2Goal.Constants = {
   UPRIGHT_CYLINDER: 1,
   GRAB_UPRIGHT_CYLINDER: 1,
-  TOY_BLOCK: 2,
-  GRAB_TOY_BLOCK: 2,
+  COKE_CAN: 2,
+  GRAB_COKE_CAN: 2,
   GRAB_W_TOOL_Z_APPROACH: 2,
   PLACE_UPRIGHT_CYLINDER: 3,
-  PLACE_TOY_BLOCK: 4,
+  PLACE_COKE_CAN: 4,
   DROPOFF_ALONG_TOOL_Z: 4,
   MOVE_FLANGE_TO: 5,
   FINE_MOVE_FLANGE_TO: 6,

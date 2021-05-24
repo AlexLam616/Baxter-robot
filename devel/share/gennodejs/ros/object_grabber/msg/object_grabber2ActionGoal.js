@@ -12,8 +12,8 @@ const _arrayDeserializer = _deserializer.Array;
 const _finder = _ros_msg_utils.Find;
 const _getByteLength = _ros_msg_utils.getByteLength;
 let object_grabber2Goal = require('./object_grabber2Goal.js');
-let std_msgs = _finder('std_msgs');
 let actionlib_msgs = _finder('actionlib_msgs');
+let std_msgs = _finder('std_msgs');
 
 //-----------------------------------------------------------
 
@@ -86,7 +86,7 @@ class object_grabber2ActionGoal {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'f737f95f4ea69f3126d207ac9db0606b';
+    return '964e154d9eb428c270cc0c06a5860d3d';
   }
 
   static messageDefinition() {
@@ -137,11 +137,11 @@ class object_grabber2ActionGoal {
     
     int32 UPRIGHT_CYLINDER = 1
     int32 GRAB_UPRIGHT_CYLINDER = 1 #synonym
-    int32 TOY_BLOCK = 2
-    int32 GRAB_TOY_BLOCK = 2 #synonym
+    int32 COKE_CAN = 2
+    int32 GRAB_COKE_CAN = 2 #synonym
     int32 GRAB_W_TOOL_Z_APPROACH = 2 #another synonym
     int32 PLACE_UPRIGHT_CYLINDER = 3 #new drop-off command
-    int32 PLACE_TOY_BLOCK = 4 #drop-off toy block
+    int32 PLACE_COKE_CAN = 4 #drop-off coke can
     int32 DROPOFF_ALONG_TOOL_Z = 4 #synonym
     
     int32 MOVE_FLANGE_TO = 5 #specify flange pose to reach
@@ -153,9 +153,9 @@ class object_grabber2ActionGoal {
     int32 OPEN_GRIPPER = 101
     
     #moved these properties to object_manipulation_properties package/library
-    #float64 TOY_BLOCK_APPROACH_DIST = 0.05
-    #expect w/ gripper closed on toy block, finger separation should be more than this value:
-    #float64 TOY_BLOCK_GRIPPER_CLOSE_TEST_VAL = 80.0
+    #float64 COKE_CAN_APPROACH_DIST = 0.05
+    #expect w/ gripper closed on coke can, finger separation should be more than this value:
+    #float64 COKE_CAN_GRIPPER_CLOSE_TEST_VAL = 80.0
     
     
     #add more objects here...

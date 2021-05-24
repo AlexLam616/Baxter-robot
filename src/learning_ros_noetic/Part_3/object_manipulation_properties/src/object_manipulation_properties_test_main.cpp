@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
     
     Eigen::Affine3d grasp_transform;
     double approach_dist, gripper_test_val;
-    int object = TOY_BLOCK_ID;
+    int object = COKE_CAN_UPRIGHT;
     
     cout<<"enter object ID code (try 1000): ";
     cin>>object;

@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/alex/workspace/build
 include learning_ros_noetic/Part_6/coordinator/CMakeFiles/_coordinator_generate_messages_check_deps_ManipTaskActionFeedback.dir/progress.make
 
 learning_ros_noetic/Part_6/coordinator/CMakeFiles/_coordinator_generate_messages_check_deps_ManipTaskActionFeedback:
-	cd /home/alex/workspace/build/learning_ros_noetic/Part_6/coordinator && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py coordinator /home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg actionlib_msgs/GoalStatus:actionlib_msgs/GoalID:std_msgs/Header:coordinator/ManipTaskFeedback
+	cd /home/alex/workspace/build/learning_ros_noetic/Part_6/coordinator && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py coordinator /home/alex/workspace/devel/share/coordinator/msg/ManipTaskActionFeedback.msg std_msgs/Header:actionlib_msgs/GoalStatus:coordinator/ManipTaskFeedback:actionlib_msgs/GoalID
 
 _coordinator_generate_messages_check_deps_ManipTaskActionFeedback: learning_ros_noetic/Part_6/coordinator/CMakeFiles/_coordinator_generate_messages_check_deps_ManipTaskActionFeedback
 _coordinator_generate_messages_check_deps_ManipTaskActionFeedback: learning_ros_noetic/Part_6/coordinator/CMakeFiles/_coordinator_generate_messages_check_deps_ManipTaskActionFeedback.dir/build.make

@@ -56,11 +56,11 @@ struct object_grabber2Goal_
 #if defined(_WIN32) && defined(GRAB_UPRIGHT_CYLINDER)
   #undef GRAB_UPRIGHT_CYLINDER
 #endif
-#if defined(_WIN32) && defined(TOY_BLOCK)
-  #undef TOY_BLOCK
+#if defined(_WIN32) && defined(COKE_CAN)
+  #undef COKE_CAN
 #endif
-#if defined(_WIN32) && defined(GRAB_TOY_BLOCK)
-  #undef GRAB_TOY_BLOCK
+#if defined(_WIN32) && defined(GRAB_COKE_CAN)
+  #undef GRAB_COKE_CAN
 #endif
 #if defined(_WIN32) && defined(GRAB_W_TOOL_Z_APPROACH)
   #undef GRAB_W_TOOL_Z_APPROACH
@@ -68,8 +68,8 @@ struct object_grabber2Goal_
 #if defined(_WIN32) && defined(PLACE_UPRIGHT_CYLINDER)
   #undef PLACE_UPRIGHT_CYLINDER
 #endif
-#if defined(_WIN32) && defined(PLACE_TOY_BLOCK)
-  #undef PLACE_TOY_BLOCK
+#if defined(_WIN32) && defined(PLACE_COKE_CAN)
+  #undef PLACE_COKE_CAN
 #endif
 #if defined(_WIN32) && defined(DROPOFF_ALONG_TOOL_Z)
   #undef DROPOFF_ALONG_TOOL_Z
@@ -96,11 +96,11 @@ struct object_grabber2Goal_
   enum {
     UPRIGHT_CYLINDER = 1,
     GRAB_UPRIGHT_CYLINDER = 1,
-    TOY_BLOCK = 2,
-    GRAB_TOY_BLOCK = 2,
+    COKE_CAN = 2,
+    GRAB_COKE_CAN = 2,
     GRAB_W_TOOL_Z_APPROACH = 2,
     PLACE_UPRIGHT_CYLINDER = 3,
-    PLACE_TOY_BLOCK = 4,
+    PLACE_COKE_CAN = 4,
     DROPOFF_ALONG_TOOL_Z = 4,
     MOVE_FLANGE_TO = 5,
     FINE_MOVE_FLANGE_TO = 6,
@@ -223,12 +223,12 @@ struct MD5Sum< ::object_grabber::object_grabber2Goal_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "0ec453df5b9dae92255e6473b05fa39a";
+    return "1a138183271b2d4bedc55643f3d08868";
   }
 
   static const char* value(const ::object_grabber::object_grabber2Goal_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x0ec453df5b9dae92ULL;
-  static const uint64_t static_value2 = 0x255e6473b05fa39aULL;
+  static const uint64_t static_value1 = 0x1a138183271b2d4bULL;
+  static const uint64_t static_value2 = 0xedc55643f3d08868ULL;
 };
 
 template<class ContainerAllocator>
@@ -255,11 +255,11 @@ struct Definition< ::object_grabber::object_grabber2Goal_<ContainerAllocator> >
 "\n"
 "int32 UPRIGHT_CYLINDER = 1\n"
 "int32 GRAB_UPRIGHT_CYLINDER = 1 #synonym\n"
-"int32 TOY_BLOCK = 2\n"
-"int32 GRAB_TOY_BLOCK = 2 #synonym\n"
+"int32 COKE_CAN = 2\n"
+"int32 GRAB_COKE_CAN = 2 #synonym\n"
 "int32 GRAB_W_TOOL_Z_APPROACH = 2 #another synonym\n"
 "int32 PLACE_UPRIGHT_CYLINDER = 3 #new drop-off command\n"
-"int32 PLACE_TOY_BLOCK = 4 #drop-off toy block\n"
+"int32 PLACE_COKE_CAN = 4 #drop-off coke can\n"
 "int32 DROPOFF_ALONG_TOOL_Z = 4 #synonym\n"
 "\n"
 "int32 MOVE_FLANGE_TO = 5 #specify flange pose to reach\n"
@@ -271,9 +271,9 @@ struct Definition< ::object_grabber::object_grabber2Goal_<ContainerAllocator> >
 "int32 OPEN_GRIPPER = 101\n"
 "\n"
 "#moved these properties to object_manipulation_properties package/library\n"
-"#float64 TOY_BLOCK_APPROACH_DIST = 0.05\n"
-"#expect w/ gripper closed on toy block, finger separation should be more than this value:\n"
-"#float64 TOY_BLOCK_GRIPPER_CLOSE_TEST_VAL = 80.0\n"
+"#float64 COKE_CAN_APPROACH_DIST = 0.05\n"
+"#expect w/ gripper closed on coke can, finger separation should be more than this value:\n"
+"#float64 COKE_CAN_GRIPPER_CLOSE_TEST_VAL = 80.0\n"
 "\n"
 "\n"
 "#add more objects here...\n"

@@ -137,12 +137,12 @@ struct MD5Sum< ::object_grabber::object_grabber2Action_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "624ac35725a317eb9e67ebe19d183592";
+    return "020d8c1c2b6e1ffd944819792cf3c1c3";
   }
 
   static const char* value(const ::object_grabber::object_grabber2Action_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x624ac35725a317ebULL;
-  static const uint64_t static_value2 = 0x9e67ebe19d183592ULL;
+  static const uint64_t static_value1 = 0x020d8c1c2b6e1ffdULL;
+  static const uint64_t static_value2 = 0x944819792cf3c1c3ULL;
 };
 
 template<class ContainerAllocator>
@@ -214,11 +214,11 @@ struct Definition< ::object_grabber::object_grabber2Action_<ContainerAllocator> 
 "\n"
 "int32 UPRIGHT_CYLINDER = 1\n"
 "int32 GRAB_UPRIGHT_CYLINDER = 1 #synonym\n"
-"int32 TOY_BLOCK = 2\n"
-"int32 GRAB_TOY_BLOCK = 2 #synonym\n"
+"int32 COKE_CAN = 2\n"
+"int32 GRAB_COKE_CAN = 2 #synonym\n"
 "int32 GRAB_W_TOOL_Z_APPROACH = 2 #another synonym\n"
 "int32 PLACE_UPRIGHT_CYLINDER = 3 #new drop-off command\n"
-"int32 PLACE_TOY_BLOCK = 4 #drop-off toy block\n"
+"int32 PLACE_COKE_CAN = 4 #drop-off coke can\n"
 "int32 DROPOFF_ALONG_TOOL_Z = 4 #synonym\n"
 "\n"
 "int32 MOVE_FLANGE_TO = 5 #specify flange pose to reach\n"
@@ -230,9 +230,9 @@ struct Definition< ::object_grabber::object_grabber2Action_<ContainerAllocator> 
 "int32 OPEN_GRIPPER = 101\n"
 "\n"
 "#moved these properties to object_manipulation_properties package/library\n"
-"#float64 TOY_BLOCK_APPROACH_DIST = 0.05\n"
-"#expect w/ gripper closed on toy block, finger separation should be more than this value:\n"
-"#float64 TOY_BLOCK_GRIPPER_CLOSE_TEST_VAL = 80.0\n"
+"#float64 COKE_CAN_APPROACH_DIST = 0.05\n"
+"#expect w/ gripper closed on coke can, finger separation should be more than this value:\n"
+"#float64 COKE_CAN_GRIPPER_CLOSE_TEST_VAL = 80.0\n"
 "\n"
 "\n"
 "#add more objects here...\n"

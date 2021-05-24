@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/alex/workspace/build
 include learning_ros_noetic/Part_4/navigator/CMakeFiles/_navigator_generate_messages_check_deps_navigatorActionGoal.dir/progress.make
 
 learning_ros_noetic/Part_4/navigator/CMakeFiles/_navigator_generate_messages_check_deps_navigatorActionGoal:
-	cd /home/alex/workspace/build/learning_ros_noetic/Part_4/navigator && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py navigator /home/alex/workspace/devel/share/navigator/msg/navigatorActionGoal.msg geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Point:actionlib_msgs/GoalID:geometry_msgs/Pose:geometry_msgs/PoseStamped:navigator/navigatorGoal
+	cd /home/alex/workspace/build/learning_ros_noetic/Part_4/navigator && ../../../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py navigator /home/alex/workspace/devel/share/navigator/msg/navigatorActionGoal.msg navigator/navigatorGoal:geometry_msgs/PoseStamped:actionlib_msgs/GoalID:geometry_msgs/Point:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Pose
 
 _navigator_generate_messages_check_deps_navigatorActionGoal: learning_ros_noetic/Part_4/navigator/CMakeFiles/_navigator_generate_messages_check_deps_navigatorActionGoal
 _navigator_generate_messages_check_deps_navigatorActionGoal: learning_ros_noetic/Part_4/navigator/CMakeFiles/_navigator_generate_messages_check_deps_navigatorActionGoal.dir/build.make

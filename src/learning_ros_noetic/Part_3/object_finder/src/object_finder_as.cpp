@@ -58,7 +58,7 @@ object_finder_as_(nh_, "object_finder_action_service", boost::bind(&ObjectFinder
 bool ObjectFinder::find_upright_coke_can(float surface_height, geometry_msgs::PoseStamped &object_pose) {
     bool found_object = true;
     object_pose.header.frame_id = "world";
-    object_pose.pose.position.x = 0.680;
+    object_pose.pose.position.x = 0.700;
     object_pose.pose.position.y = -0.205;
     object_pose.pose.position.z = surface_height;
     object_pose.pose.orientation.x = 0;

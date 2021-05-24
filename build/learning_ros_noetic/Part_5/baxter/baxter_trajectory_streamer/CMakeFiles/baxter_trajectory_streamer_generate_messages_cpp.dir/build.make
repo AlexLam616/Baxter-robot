@@ -64,56 +64,56 @@ learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer/CMakeFiles/baxter_t
 
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajAction.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionGoal.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/trajectory_msgs/msg/JointTrajectory.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajResult.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionResult.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajGoal.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajFeedback.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/trajectory_msgs/msg/JointTrajectory.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/trajectory_msgs/msg/JointTrajectoryPoint.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajResult.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionResult.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionFeedback.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionGoal.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajAction.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from baxter_trajectory_streamer/trajAction.msg"
 	cd /home/alex/workspace/src/learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer && /home/alex/workspace/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajAction.msg -Ibaxter_trajectory_streamer:/home/alex/workspace/devel/share/baxter_trajectory_streamer/msg -Iroscpp:/opt/ros/noetic/share/roscpp/cmake/../msg -Ibaxter_core_msgs:/home/alex/workspace/src/learning_ros_external_pkgs_noetic/baxter_common/baxter_core_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Itrajectory_msgs:/opt/ros/noetic/share/trajectory_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Iactionlib:/opt/ros/noetic/share/actionlib/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p baxter_trajectory_streamer -o /home/alex/workspace/devel/include/baxter_trajectory_streamer -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionGoal.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/share/trajectory_msgs/msg/JointTrajectory.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajGoal.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/share/trajectory_msgs/msg/JointTrajectory.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/share/trajectory_msgs/msg/JointTrajectoryPoint.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from baxter_trajectory_streamer/trajActionGoal.msg"
 	cd /home/alex/workspace/src/learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer && /home/alex/workspace/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionGoal.msg -Ibaxter_trajectory_streamer:/home/alex/workspace/devel/share/baxter_trajectory_streamer/msg -Iroscpp:/opt/ros/noetic/share/roscpp/cmake/../msg -Ibaxter_core_msgs:/home/alex/workspace/src/learning_ros_external_pkgs_noetic/baxter_common/baxter_core_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Itrajectory_msgs:/opt/ros/noetic/share/trajectory_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Iactionlib:/opt/ros/noetic/share/actionlib/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p baxter_trajectory_streamer -o /home/alex/workspace/devel/include/baxter_trajectory_streamer -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionResult.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajResult.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionResult.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from baxter_trajectory_streamer/trajActionResult.msg"
 	cd /home/alex/workspace/src/learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer && /home/alex/workspace/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionResult.msg -Ibaxter_trajectory_streamer:/home/alex/workspace/devel/share/baxter_trajectory_streamer/msg -Iroscpp:/opt/ros/noetic/share/roscpp/cmake/../msg -Ibaxter_core_msgs:/home/alex/workspace/src/learning_ros_external_pkgs_noetic/baxter_common/baxter_core_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Itrajectory_msgs:/opt/ros/noetic/share/trajectory_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Iactionlib:/opt/ros/noetic/share/actionlib/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p baxter_trajectory_streamer -o /home/alex/workspace/devel/include/baxter_trajectory_streamer -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionFeedback.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajFeedback.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajFeedback.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajActionFeedback.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from baxter_trajectory_streamer/trajActionFeedback.msg"
 	cd /home/alex/workspace/src/learning_ros_noetic/Part_5/baxter/baxter_trajectory_streamer && /home/alex/workspace/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajActionFeedback.msg -Ibaxter_trajectory_streamer:/home/alex/workspace/devel/share/baxter_trajectory_streamer/msg -Iroscpp:/opt/ros/noetic/share/roscpp/cmake/../msg -Ibaxter_core_msgs:/home/alex/workspace/src/learning_ros_external_pkgs_noetic/baxter_common/baxter_core_msgs/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Itrajectory_msgs:/opt/ros/noetic/share/trajectory_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -Iactionlib:/opt/ros/noetic/share/actionlib/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p baxter_trajectory_streamer -o /home/alex/workspace/devel/include/baxter_trajectory_streamer -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajGoal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajGoal.h: /home/alex/workspace/devel/share/baxter_trajectory_streamer/msg/trajGoal.msg
-/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajGoal.h: /opt/ros/noetic/share/trajectory_msgs/msg/JointTrajectoryPoint.msg
+/home/alex/workspace/devel/include/baxter_trajectory_streamer/trajGoal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajGoal.h: /opt/ros/noetic/share/trajectory_msgs/msg/JointTrajectory.msg
 /home/alex/workspace/devel/include/baxter_trajectory_streamer/trajGoal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from baxter_trajectory_streamer/trajGoal.msg"

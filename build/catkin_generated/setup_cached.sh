@@ -8,9 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/alex/workspace/devel:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/alex/workspace/devel/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/alex/workspace/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/alex/workspace/build'
-export PYTHONPATH="/home/alex/workspace/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES='/home/alex/workspace/devel/share/common-lisp'
 export ROS_PACKAGE_PATH="/home/alex/workspace/src:$ROS_PACKAGE_PATH"
