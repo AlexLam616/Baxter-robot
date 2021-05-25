@@ -41,7 +41,7 @@
 
 <br/>
 
-> Terminal 4: Runnning object grabber action client
+> Terminal 4: Runnning object grabber action client source code
 
 - cd $HOME/workspace
 
